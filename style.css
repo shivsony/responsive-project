@@ -1,13 +1,44 @@
-.header{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+.main-header{
+    display: grid;
+    background-color: aqua;
+    grid-template-columns: 30% 30% 14% 13% 13%;
     align-items: center;
+    grid-template-areas: 
+        "logo gap feature howitworks pricing";
     margin: 0;
     padding: 0;
+    width: 100%;
+}
+.logo{
+    grid-area: logo;
+}
+img{
+    width: 70%;
+}
+.gap{
+    grid-area: gap;
+}
+.feature{
+    grid-area: feature;
+}
+.howitworks{
+    grid-area: howitworks;
+}
+.pricing{
+    grid-area: pricing;
 }
 a{
     text-decoration: none;
     font-size: 18px;
     color: #000;
+}
+@media screen and (max-width: 756px){
+    .main-header{
+        display: block;
+        text-align: center;
+    }
+     .logo{
+            width: 100%;
+        }
+
 }
